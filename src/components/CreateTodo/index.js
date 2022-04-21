@@ -43,7 +43,10 @@ const CreatePost = ({}) => {
           <Row gutter={[0, 24]}>
             <Col span={24}>
               <Row gutter={[16, 8]}>
-                <Col span={12} xs={24}>
+                <Col
+                    md={16}
+                    xs={24}
+                >
                   <Input
                       onChange={(e) => setTodo((prev) => (
                           { ...prev, title: e.target.value }
@@ -54,8 +57,7 @@ const CreatePost = ({}) => {
                 </Col>
 
                 <Col
-                    span={12}
-                    md={4}
+                    md={8}
                     xs={24}
                 >
                   <Button

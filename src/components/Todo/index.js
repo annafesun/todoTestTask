@@ -20,7 +20,6 @@ const Todo = ({ id, title, tasks = [] }) => {
 
   return (
       <Card
-
           className={styles.post}
           title={title}
           bordered={false}
@@ -29,15 +28,20 @@ const Todo = ({ id, title, tasks = [] }) => {
             todoId={id}
             lastTaskId={lastTaskId}
         />
-        {tasks?.map(({ id: taskId, task, done }) => (
-            <Task
-                key={taskId}
-                todoId={id}
-                taskId={taskId}
-                task={task}
-                done={done}
-            />
-        ))}
+        <ol className={styles.tasks}>
+          {tasks?.map(({ id: taskId, task, done }, index) => (
+              <li  key={taskId}>
+                <Task
+
+                    todoId={id}
+                    taskId={taskId}
+                    task={task}
+                    done={done}
+                    numeration={index}
+                />
+              </li>
+          ))}
+        </ol>
         <Button
             className={styles.removeTodoBtn}
             type="primary"

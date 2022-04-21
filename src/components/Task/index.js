@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux'
 import React, { useEffect, useRef, useState } from 'react'
-import { Button, Checkbox } from 'antd'
+import { Button, Checkbox, Row } from 'antd'
 import { CloseSquareOutlined } from '@ant-design/icons'
 //slice
 import { TodoActions } from '../../store/reducers/todo/slice'
@@ -8,7 +8,7 @@ import { TodoActions } from '../../store/reducers/todo/slice'
 import styles from './index.module.css'
 import classnames from 'classnames'
 
-const Task = ({ todoId, taskId, task, done }) => {
+const Task = ({ todoId, taskId, task, done, numeration}) => {
   const dispatch = useDispatch()
   const [isActive, setActive] = useState(false)
   const [inputValue, setInputValue] = useState('')
@@ -36,7 +36,8 @@ const Task = ({ todoId, taskId, task, done }) => {
     }))
   }
 
-  const activeTask = () => {
+  const activeTask = (e) => {
+    e.preventDefault()
     setActive(true)
   }
 
@@ -59,7 +60,7 @@ const Task = ({ todoId, taskId, task, done }) => {
           key={taskId}
       >
         <div className={styles.taskText}>
-          Task:
+
           {isActive
               ?
               <input
@@ -70,30 +71,30 @@ const Task = ({ todoId, taskId, task, done }) => {
                   type="text"
               />
               :
-              <span
-                  onDoubleClick={activeTask}
+              <a
+                  onClick={activeTask}
+                  className={styles.tooltip}
+                  href="#"
               >
-                <a
-                    className={styles.tooltip}
-                    href="#"
-                >
-                    {task}
-                  <span>Double click for change your task</span>
-                </a>
-              </span>
+                {task}
+                <span>Click to change your task</span>
+              </a>
           }
         </div>
-        <Checkbox
-            checked={done}
-            onChange={handleChangeStatus}
-        />
-        <Button
-            size="small"
-            onClick={() => removeTask({ id: todoId, taskId })}
-            alt="minus"
-        >
-          <CloseSquareOutlined />
-        </Button>
+         <div>
+           <Checkbox
+               className={styles.checkbox}
+               checked={done}
+               onChange={handleChangeStatus}
+           />
+           <Button
+               size="small"
+               onClick={() => removeTask({ id: todoId, taskId })}
+               alt="minus"
+           >
+             <CloseSquareOutlined />
+           </Button>
+         </div>
       </div>
   )
 }

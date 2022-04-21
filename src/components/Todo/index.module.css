@@ -9,6 +9,10 @@
     margin-bottom: 20px;
 }
 
+.tasks{
+    padding-left: 15px;
+}
+
 .removeTodoBtn {
     position: absolute;
     bottom: 0;

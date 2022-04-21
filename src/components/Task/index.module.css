@@ -5,7 +5,7 @@
 }
 
 .taskText {
-    flex: 0 0 50%;
+    flex: 1 0 50%;
 }
 
 .tooltip {
@@ -40,4 +40,8 @@
 
 .done {
     opacity: 0.3;
+}
+
+.checkbox{
+    margin: 0 15px;
 }

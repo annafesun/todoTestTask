@@ -22,3 +22,10 @@
     background-color: #af0d0d;
     transition: all .3s ease-in-out;
 }
+
+.taskCounter{
+    font-weight: bold;
+    color: #131379;
+    font-size: 12px;
+    text-align: right;
+}

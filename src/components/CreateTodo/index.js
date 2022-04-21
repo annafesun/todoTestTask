@@ -77,6 +77,7 @@ const CreatePost = ({}) => {
                           tasks={tasks}
                           title={title}
                       />
+
                     </Col>
                 ))}
                 {!todos?.length && <p className={styles.notList}>Please create your first TODO!</p>}

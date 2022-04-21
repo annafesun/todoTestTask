@@ -11,7 +11,7 @@ const initialState = {
                 done: true,
             },
             {
-                id: 1,
+                id: 2,
                 task: 'task 2',
                 done: false,
             }

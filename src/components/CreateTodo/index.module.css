@@ -10,7 +10,12 @@
     margin: 0 auto;
 }
 
+.ant-btn .ant-btn-primary{
+    padding: 5px 10px;
+}
+
 .btnSubmit{
+    padding: 5px 10px;
     background-color: #0b0b7b;
 }
 

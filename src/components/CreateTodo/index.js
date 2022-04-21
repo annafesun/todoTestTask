@@ -42,8 +42,8 @@ const CreatePost = ({}) => {
           <p className={styles.borderTodoText}>Todos ({todos.length})</p>
           <Row gutter={[0, 24]}>
             <Col span={24}>
-              <Row gutter={16}>
-                <Col span={12}>
+              <Row gutter={[16, 8]}>
+                <Col span={12} xs={24}>
                   <Input
                       onChange={(e) => setTodo((prev) => (
                           { ...prev, title: e.target.value }
@@ -53,7 +53,11 @@ const CreatePost = ({}) => {
                   />
                 </Col>
 
-                <Col span={4}>
+                <Col
+                    span={12}
+                    md={4}
+                    xs={24}
+                >
                   <Button
                       block
                       type="primary"
@@ -70,7 +74,9 @@ const CreatePost = ({}) => {
                 {todos?.map(({ title, id, tasks }) => (
                     <Col
                         key={id}
-                        span={8}
+                        span={24}
+                        sm={12}
+                        lg={8}
                     >
                       <Todo
                           id={id}

@@ -27,7 +27,10 @@ const CreateTaskForm = ({ todoId, lastTaskId }) => {
           onFinish={onFinish}
       >
         <Row gutter={[12, 12]}>
-          <Col span={12}>
+          <Col
+              span={24}
+              md={12}
+          >
             <Form.Item
                 name="task"
                 label="Task"
@@ -37,24 +40,31 @@ const CreateTaskForm = ({ todoId, lastTaskId }) => {
               />
             </Form.Item>
           </Col>
-          <Col span={12}>
-            <Form.Item>
-              <Button
-                  size="small"
-                  className={styles.buttonAdd}
-                  type="primary"
-                  htmlType="submit"
-              >
-                Add task
-              </Button>
-              <Button
-                  size="small"
-                  htmlType="button"
-                  onClick={onReset}
-              >
-                Reset
-              </Button>
-            </Form.Item>
+          <Col span={24} md={12}>
+             <Row gutter={10}>
+               <Col span={12}>
+                 <Button
+                     block
+                     size="small"
+                     className={styles.buttonAdd}
+                     type="primary"
+                     htmlType="submit"
+                 >
+                   Add task
+                 </Button>
+               </Col>
+               <Col span={12}>
+                 <Button
+                     block
+                     size="small"
+                     htmlType="button"
+                     onClick={onReset}
+                 >
+                   Reset
+                 </Button>
+               </Col>
+             </Row>
+
           </Col>
         </Row>
       </Form>

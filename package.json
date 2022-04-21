@@ -1,7 +1,7 @@
 {
   "name": "to_do_list",
   "version": "0.1.0",
-  "homepage": "https://annafesun.github.io/todoTaskTest",
+  "homepage": "https://annafesun.github.io/todoTestTask",
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.7.0",

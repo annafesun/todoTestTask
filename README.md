@@ -1,3 +1,3 @@
 ### Test task for company DomDev
 
-* Deployed project - https://annafesun.github.io/todoTaskTest
+* Deployed project - https://annafesun.github.io/todoTestTask

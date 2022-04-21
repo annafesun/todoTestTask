@@ -1,0 +1,26 @@
+.createPost {
+    padding: 10px;
+    min-height: 100vh;
+    background-color: #fcfdfd;
+}
+
+.notList {
+    color: #e56407;
+    font-size: 50px;
+    margin: 0 auto;
+}
+
+.btnSubmit{
+    background-color: #0b0b7b;
+}
+
+.borderTodo {
+    border: 1px solid black;
+    box-shadow: 10px 5px 5px grey;
+    padding: 20px;
+}
+
+.borderTodoText {
+    font-size: 20px;
+    font-weight: bold;
+}

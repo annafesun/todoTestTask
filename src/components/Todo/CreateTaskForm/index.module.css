@@ -1,0 +1,15 @@
+.buttonAdd:not(:last-child) {
+    margin-right: 10px;
+    background-color: #0b0b7b;
+    border: none;
+    box-shadow: 0 0 5px #827d7b;
+    color: white;
+}
+
+.buttonAdd:hover {
+    background-color: #5353aa;
+    color: #f5f5f5;
+    transition: all .3s ease-in-out;
+}
+
+
